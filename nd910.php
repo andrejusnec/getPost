@@ -4,6 +4,7 @@ if (isset($_COOKIE['Rez'])) {
     $rez = $_COOKIE['Rez'];
     setcookie('Rez', '', time() - 555);
 }*/
+_d($_POST);
 session_start();
 if(isset($_SESSION['Rez'])) {
     $rez = $_SESSION['Rez'];

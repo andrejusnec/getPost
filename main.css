@@ -1,3 +1,88 @@
 .bg {
-    color:red;
+    background-color: aqua;
+    display: grid;
+    grid-template-rows: 20px 100px 1fr 1fr 1fr 20px;
+    grid-template-columns: 20px 1fr 1fr 20px;
+
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+}
+h1{
+    text-align: center;
+    grid-column: 2/4;
+    display: inline-block;
+    grid-row: 2/3;
+    align-self: center;
+}
+.bg > .pic {
+    display: inline-block;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: end;
+}
+.bg > .forma {
+    display: inline-block;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    margin-left: 30px;
+    align-self: center;
+}
+.bg > .pic2 {
+    display: inline-block;
+    grid-column: 2/3;
+    grid-row: 4/5;
+    text-align: end;
+}
+.bg > .forma2 {
+    display: inline-block;
+    grid-column: 3/4;
+    grid-row: 4/5;
+    margin-left: 30px;
+    align-self: center;
+}
+.bg > .pic3 {
+    display: inline-block;
+    grid-column: 2/3;
+    grid-row: 5/6;
+    text-align: end;
+}
+.bg > .forma3 {
+    display: inline-block;
+    grid-column: 3/4;
+    grid-row: 5/6;
+    margin-left: 30px;
+    align-self: center;
+}
+ .btn {
+    margin-top: 20px;
+    border: 2px solid red;
+    background-color: white;
+    font-size: bold;
+    font-weight: bold;
+    border-radius: 22px;
+    height: 30px;
+    width: 60px;
+}
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color:blue;
+}
+img {
+    border:2px solid black;
+    width: 263px;
+    height: 263px;
 }
