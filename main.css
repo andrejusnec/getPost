@@ -1,9 +1,16 @@
 .bg {
-    background-color: aqua;
+    background-image: linear-gradient(to bottom right, #bdc3c7, #2c3e50);
     display: grid;
-    grid-template-rows: 20px 100px 1fr 1fr 1fr 20px;
+    grid-template-rows: 20px 60px 50px 1fr 20px;
     grid-template-columns: 20px 1fr 1fr 20px;
 
+}
+.answer {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    align-self: center;
+    text-align: center;
+    display: none;
 }
 a {
     text-decoration: none;
@@ -14,8 +21,7 @@ h1{
     text-align: center;
     grid-column: 2/4;
     display: inline-block;
-    grid-row: 2/3;
-    align-self: center;
+    grid-row: 1/3;
 }
 .bg > .pic {
     display: inline-block;
@@ -25,35 +31,9 @@ h1{
 }
 .bg > .forma {
     display: inline-block;
-    grid-column: 3/4;
-    grid-row: 3/4;
-    margin-left: 30px;
-    align-self: center;
-}
-.bg > .pic2 {
-    display: inline-block;
-    grid-column: 2/3;
+    grid-column: 2/4;
+    margin: auto;
     grid-row: 4/5;
-    text-align: end;
-}
-.bg > .forma2 {
-    display: inline-block;
-    grid-column: 3/4;
-    grid-row: 4/5;
-    margin-left: 30px;
-    align-self: center;
-}
-.bg > .pic3 {
-    display: inline-block;
-    grid-column: 2/3;
-    grid-row: 5/6;
-    text-align: end;
-}
-.bg > .forma3 {
-    display: inline-block;
-    grid-column: 3/4;
-    grid-row: 5/6;
-    margin-left: 30px;
     align-self: center;
 }
  .btn {
@@ -86,3 +66,25 @@ img {
     width: 263px;
     height: 263px;
 }
+
+.btn-grad {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    margin: auto;
+    margin-top: 13px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: blanchedalmond;
+    box-shadow: 0 0 10px #eee;
+    border-radius: 13px;
+    display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
