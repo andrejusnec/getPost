@@ -9,12 +9,12 @@ $bandom = 'none';
         $count = 0;
         if(empty($_POST['ats']) || empty($_POST['ats2']) || empty($_POST['ats3'])) {
             $hide = 'inline-block';
-            $text = '<p style="color:red">Ne viska pazymejote!</p>';
-            header("refresh:5;url=http://localhost/php_proj/getPost/forma.php");
+            $text = '<p class="test" style="color:red">Ooops. Kažkur pamiršote pažymėti savo atsakymą!</p>';
+            header("refresh:7;url=http://localhost/php_proj/getPost/forma.php");
         }else if(count($_POST['ats']) > 1 || count($rez2) > 1 || count($rez3)> 1) {
-            $text = '<p style="color:red">Atsakymas gali buti tik vienas</p>';
+            $text = '<p class="test" style="color:red;">Kiekvienas klausymas gali turėti tik po viena atsakymą!</p>';
             $hide = 'inline-block';
-            header("refresh:5;url=http://localhost/php_proj/getPost/forma.php");
+            header("refresh:7;url=http://localhost/php_proj/getPost/forma.php");
         } else {
         if(in_array('Yes', $_POST['ats']) && count($rez) == 1) {
             ++$count;
@@ -59,6 +59,8 @@ $bandom = 'none';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forma</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 <body class='bg'>
     <h1>Apklausa</h1>
@@ -74,22 +76,18 @@ $bandom = 'none';
     <span style="color:lime; display:<?php echo $hide2.'">'.$text2?></span><br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats[]">
-  <span class="checkmark"></span>
   1952 metais
 </label> <br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats[]" value="Yes">
-  <span class="checkmark"></span>
   Kas ta JAVA?
 </label><br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats[]">
-  <span class="checkmark"></span>
   1970 metais
 </label><br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats[]">
-  <span class="checkmark"></span>
   Kai puodukas tapo sikpuodziu
 </label>
 <br><br>
@@ -101,22 +99,18 @@ $bandom = 'none';
 <form action="" method="post">
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats2[]">
-  <span class="checkmark"></span>
   As po 10 metu
 </label> <br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats2[]" value="Yes">
-  <span class="checkmark"></span>
   As po kursu pabaigos
 </label><br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats2[]">
-  <span class="checkmark"></span>
   Nesamone kazkokia
 </label><br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats2[]">
-  <span class="checkmark"></span>
   Moksliukas
 </label><br><br>
 <div class="pic3">
@@ -127,22 +121,18 @@ $bandom = 'none';
 <form action="" method="post">
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats3[]">
-  <span class="checkmark"></span>
   Is fabriko
 </label> <br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats3[]">
-  <span class="checkmark"></span>
   Termoso palikuonis
 </label><br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats3[]">
-  <span class="checkmark"></span>
   Is sikpuodzio
 </label><br>
 <label class="container">
   <input class="checkbox-round" type="checkbox" name="ats3[]" value="Yes">
-  <span class="checkmark"></span>
   Is objekto
 </label><br>
 <button class="btn-grad" type="submit" name="button">Taigis</button>

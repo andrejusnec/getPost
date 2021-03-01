@@ -3,6 +3,7 @@
     display: grid;
     grid-template-rows: 20px 60px 50px 1fr 20px;
     grid-template-columns: 20px 1fr 1fr 20px;
+    font-family: 'Roboto Slab', serif;
 
 }
 .answer {
@@ -12,10 +13,21 @@
     text-align: center;
     display: none;
 }
+.test {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.4px;
+}
 a {
     text-decoration: none;
     font-weight: bold;
     color: red;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.4px;
+}
+a:hover {
+    color: lime;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.4px;
 }
 h1{
     text-align: center;
@@ -36,30 +48,22 @@ h1{
     grid-row: 4/5;
     align-self: center;
 }
- .btn {
-    margin-top: 20px;
-    border: 2px solid red;
-    background-color: white;
-    font-size: bold;
-    font-weight: bold;
-    border-radius: 22px;
-    height: 30px;
-    width: 60px;
-}
 .checkbox-round {
-    width: 1.3em;
-    height: 1.3em;
+    width: 1.2em;
+    height: 1.2em;
     background-color: white;
     border-radius: 50%;
     vertical-align: middle;
-    border: 1px solid #ddd;
+    border: 1px solid #000;
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
 }
 
 .checkbox-round:checked {
-    background-color:blue;
+    background-image: url(./check-mark.png);
+    background-position: center;
+    background-size: contain;
 }
 img {
     border:2px solid black;
@@ -80,11 +84,13 @@ img {
     box-shadow: 0 0 10px #eee;
     border-radius: 13px;
     display: block;
+    font-weight: 900;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.6px;
  }
 
  .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
+   background-position: right center;
    color: #fff;
    text-decoration: none;
  }
-
